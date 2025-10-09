@@ -1,10 +1,19 @@
-﻿internal class Program
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using YamahaMotor.motor.yamaha;
+
+namespace YamahaMotor
 {
-    
-    private static void Main(string[] args)
+    internal class Program
     {
-        MyDate md1 = new MyDate(DateTime.Now.Day,DateTime.Now.Month, DateTime.Now.Year);
-        Console.WriteLine("{0}/{1}/{2}",md1.Day,md1.Month,md1.Year);
-        Console.ReadKey();
+        static void Main(string[] args)
+        {
+            Yamaha app = new Yamaha();
+            app.ShowMenu();
+            Console.WriteLine("Thoát chương trình. Tạm biệt!");
+        }
     }
 }
